@@ -948,7 +948,7 @@
         </ray>
         <plugin name="{{ vehicle_name }}_rplidar" filename="libgazebo_ros_ray_sensor.so">
           <ros>
-            <argument>~/out:={{ vehicle_name }}/rplidar/scan</argument>
+            <argument>--ros-args --remap ~/out:={{ vehicle_name }}/rplidar/scan</argument>
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
           <frame_name>{{ vehicle_name }}/rplidar</frame_name>
@@ -1030,7 +1030,7 @@
       </ray>
       <plugin name="{{ vehicle_name }}_garmin" filename="libgazebo_ros_ray_sensor.so">
         <ros>
-          <argument>~/out:={{ vehicle_name }}/garmin/range</argument>
+          <argument>--ros-args --remap ~/out:={{ vehicle_name }}/garmin/range</argument>
         </ros>
         <output_type>sensor_msgs/Range</output_type>
         <frame_name>{{ vehicle_name }}/garmin</frame_name>
