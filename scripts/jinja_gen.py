@@ -44,6 +44,7 @@ if __name__ == "__main__":
     parser.add_argument('--mavlink_cam_udp_port', default=14530, help="Mavlink camera UDP port for SITL")
     parser.add_argument('--vehicle_name', default="ssrc_fog_x", help="Mavlink camera UDP port for SITL")
     parser.add_argument('--lockstep', default=1, help="Enable simulation lockstep for syncing physics&sensors")
+    parser.add_argument('--rplidar_topic', default="scan", help="Name of rplidar topic. Needed for HIL")
     parser.add_argument('--generate_ros_models', default=False, dest='generate_ros_models', type=str2bool,
                     help="required if generating the agent for usage with ROS nodes, by default false")
     args = parser.parse_args()
@@ -81,6 +82,7 @@ if __name__ == "__main__":
          'use_tcp': args.use_tcp, \
          'vehicle_name': args.vehicle_name, \
          'lockstep': args.lockstep, \
+         'rplidar_topic': args.rplidar_topic, \
          'gstudphost': args.gstudphost}
 
     result = template.render(d)

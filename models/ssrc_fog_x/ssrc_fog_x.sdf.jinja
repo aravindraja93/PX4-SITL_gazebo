@@ -948,7 +948,7 @@
         </ray>
         <plugin name="{{ vehicle_name }}_rplidar" filename="libgazebo_ros_ray_sensor.so">
           <ros>
-            <argument>~/out:={{ vehicle_name }}/rplidar/scan</argument>
+            <argument>~/out:={{ vehicle_name }}/rplidar/{{ rplidar_topic }}</argument>
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
           <frame_name>{{ vehicle_name }}/rplidar</frame_name>
