@@ -33,7 +33,7 @@ if __name__ == "__main__":
     parser.add_argument('--serial_baudrate', default=921600, help="Baudrate of Serial device for FMU")
     parser.add_argument('--qgc_addr', default="INADDR_ANY", help="IP address for QGC")
     parser.add_argument('--hil_mode', default=0, help="Enable HIL mode for HITL simulation")
-    parser.add_argument('--use_tcp', default=0, help="Use TCP instead of UDP for PX4 SITL")
+    parser.add_argument('--use_tcp', default=1, help="Use TCP instead of UDP for PX4 SITL")
     parser.add_argument('--gstudphost', default="127.0.0.1", help="udpHost for Gst Camera plugin")
     parser.add_argument('--output-file', help="sdf output file")
     parser.add_argument('--stdout', action='store_true', default=False, help="dump to stdout instead of file")
